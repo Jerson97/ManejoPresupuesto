@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|c:\\users\\usuario\\source\\repos\\manejopresupuesto\\manejopresupuesto\\models\\tipocuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|solutionrelative:manejopresupuesto\\models\\tipocuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|c:\\users\\usuario\\source\\repos\\manejopresupuesto\\manejopresupuesto\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|solutionrelative:manejopresupuesto\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|c:\\users\\usuario\\source\\repos\\manejopresupuesto\\manejopresupuesto\\views\\tiposcuentas\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|solutionrelative:manejopresupuesto\\views\\tiposcuentas\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|c:\\users\\usuario\\source\\repos\\manejopresupuesto\\manejopresupuesto\\controllers\\tiposcuentascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|solutionrelative:manejopresupuesto\\controllers\\tiposcuentascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|c:\\users\\usuario\\source\\repos\\manejopresupuesto\\manejopresupuesto\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2B67BE6F-1B92-45C8-BC4D-DCF23FD7C71E}|ManejoPresupuesto\\ManejoPresupuesto.csproj|solutionrelative:manejopresupuesto\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,53 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "ManejoPresupuesto\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "ManejoPresupuesto\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T20:31:30.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Views\\TiposCuentas\\Crear.cshtml",
-              "RelativeDocumentMoniker": "ManejoPresupuesto\\Views\\TiposCuentas\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Views\\TiposCuentas\\Crear.cshtml",
-              "RelativeToolTip": "ManejoPresupuesto\\Views\\TiposCuentas\\Crear.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-15T19:59:06.213Z",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ManejoPresupuesto\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\appsettings.Development.json",
+              "RelativeToolTip": "ManejoPresupuesto\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-15T21:30:39.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TipoCuenta.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Models\\TipoCuenta.cs",
-              "RelativeDocumentMoniker": "ManejoPresupuesto\\Models\\TipoCuenta.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Models\\TipoCuenta.cs",
-              "RelativeToolTip": "ManejoPresupuesto\\Models\\TipoCuenta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T19:17:13.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "TiposCuentasController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Controllers\\TiposCuentasController.cs",
               "RelativeDocumentMoniker": "ManejoPresupuesto\\Controllers\\TiposCuentasController.cs",
               "ToolTip": "C:\\Users\\USUARIO\\source\\repos\\ManejoPresupuesto\\ManejoPresupuesto\\Controllers\\TiposCuentasController.cs",
               "RelativeToolTip": "ManejoPresupuesto\\Controllers\\TiposCuentasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAMwBEAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T19:16:32.871Z",
+              "WhenOpened": "2025-07-15T21:28:26.005Z",
               "EditorCaption": ""
             }
           ]
