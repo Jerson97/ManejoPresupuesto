@@ -1,0 +1,68 @@
+#############################
+# Archivos de compilación
+#############################
+bin/
+obj/
+**/bin/
+**/obj/
+
+#############################
+# Visual Studio
+#############################
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vsconfig
+
+#############################
+# Salidas de compilación
+#############################
+*.dll
+*.exe
+*.pdb
+*.cache
+
+#############################
+# Paquetes y configuración NuGet
+#############################
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.assets.json
+
+#############################
+# Archivos de publicación
+#############################
+publish/
+
+#############################
+# Archivos temporales y logs
+#############################
+*.log
+*.tmp
+*.temp
+
+#############################
+# Archivos de extensiones
+#############################
+*.vsix
+
+#############################
+# Archivos de base de datos
+#############################
+*.mdf
+*.ldf
+
+#############################
+# Otros entornos
+#############################
+.idea/          # Rider / JetBrains
+*.orig          # Archivos de fusión de Git
+
+#############################
+# Arc
