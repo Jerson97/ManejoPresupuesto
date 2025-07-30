@@ -1,4 +1,5 @@
 ﻿
+using AutoMapper;
 using ManejoPresupuesto.Models;
 using ManejoPresupuesto.Repositories.Abastract;
 using ManejoPresupuesto.Repositories.Implementation;
@@ -12,12 +13,15 @@ namespace ManejoPresupuesto.Controllers
         private readonly IRepositoriosTipoCuentas _repositoriosTipoCuentas;
         private readonly IServicioUsuarios _servicioUsuarios;
         private readonly IRepositorioCuentas _repositorioCuentas;
+        private readonly IMapper _mapper;
 
-        public CuentasController(IRepositoriosTipoCuentas repositoriosTipoCuentas, IServicioUsuarios servicioUsuarios, IRepositorioCuentas repositorioCuentas)
+        public CuentasController(IRepositoriosTipoCuentas repositoriosTipoCuentas, IServicioUsuarios servicioUsuarios, 
+                                IRepositorioCuentas repositorioCuentas, IMapper mapper)
         {
             _repositoriosTipoCuentas = repositoriosTipoCuentas;
             _servicioUsuarios = servicioUsuarios;
             _repositorioCuentas = repositorioCuentas;
+            _mapper = mapper;
         }
 
         public async Task<IActionResult> Index()
@@ -76,14 +80,7 @@ namespace ManejoPresupuesto.Controllers
                 return RedirectToAction("NoEncontrado", "Home");
             }
 
-            var modelo = new CuentaCreacionViewModel()
-            {
-                Id = cuenta.Id,
-                Nombre = cuenta.Nombre,
-                TipoCuentaId = cuenta.TipoCuentaId,
-                Descripcion = cuenta.Descripcion,
-                Balance = cuenta.Balance
-            };
+            var modelo = _mapper.Map<CuentaCreacionViewModel>(cuenta);
 
             modelo.TiposCuentas = await ObtenerTiposCuentas(usuarioId);
             return View(modelo);
@@ -111,6 +108,37 @@ namespace ManejoPresupuesto.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> Borrar(int id)
+        {
+            var usuarioId = _servicioUsuarios.ObtenerUsuarioId();
+            var cuenta = await _repositorioCuentas.ObtenerPorId(id, usuarioId);
+
+            if (cuenta is null)
+            {
+                return RedirectToAction("NoEncontrado", "Home");
+            }
+
+            return View(cuenta);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> BorrarCuenta(int id)
+        {
+            var usuarioId = _servicioUsuarios.ObtenerUsuarioId();
+            var cuenta = await _repositorioCuentas.ObtenerPorId(id, usuarioId);
+
+            if (cuenta is null)
+            {
+                return RedirectToAction("NoEncontrado", "Home");
+            }
+
+            await _repositorioCuentas.Borrar(id);
+            return RedirectToAction("Index");
+
+        }
+
+
 
         private async Task <IEnumerable<SelectListItem>> ObtenerTiposCuentas(int usuarioId)
         {
