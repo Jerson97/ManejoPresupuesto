@@ -19,13 +19,22 @@ builder.Services.AddTransient<IServicioReportes, ServicioReportes>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddTransient<IRepositorioUsuarios, RepositorioUsuarios>();
 builder.Services.AddTransient<IUserStore<Usuario>, UsuarioStore>();
+builder.Services.AddTransient<SignInManager<Usuario>>();
+
 builder.Services.AddIdentityCore<Usuario>(opc =>
 {
     opc.Password.RequireDigit = false;
     opc.Password.RequireLowercase = false;
     opc.Password.RequireUppercase = false;
     opc.Password.RequireNonAlphanumeric = false;
-});
+}).AddErrorDescriber<MensajeErrorIdentity>();
+
+builder.Services.AddAuthentication(option =>
+{
+    option.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+    option.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+    option.DefaultSignOutScheme = IdentityConstants.ApplicationScheme;
+}).AddCookie(IdentityConstants.ApplicationScheme);
 
 var app = builder.Build();
 
@@ -54,7 +63,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
+
 
 app.MapStaticAssets();
 
