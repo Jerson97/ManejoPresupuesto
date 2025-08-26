@@ -1,6 +1,8 @@
 using System.Globalization;
+using ManejoPresupuesto.Models;
 using ManejoPresupuesto.Repositories.Abastract;
 using ManejoPresupuesto.Repositories.Implementation;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,15 @@ builder.Services.AddTransient<IRepositorioTransacciones, RepositorioTransaccione
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<IServicioReportes, ServicioReportes>();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddTransient<IRepositorioUsuarios, RepositorioUsuarios>();
+builder.Services.AddTransient<IUserStore<Usuario>, UsuarioStore>();
+builder.Services.AddIdentityCore<Usuario>(opc =>
+{
+    opc.Password.RequireDigit = false;
+    opc.Password.RequireLowercase = false;
+    opc.Password.RequireUppercase = false;
+    opc.Password.RequireNonAlphanumeric = false;
+});
 
 var app = builder.Build();
 
