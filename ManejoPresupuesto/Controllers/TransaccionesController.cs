@@ -4,11 +4,13 @@ using AutoMapper;
 using ClosedXML.Excel;
 using ManejoPresupuesto.Models;
 using ManejoPresupuesto.Repositories.Abastract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ManejoPresupuesto.Controllers
 {
+    [Authorize]
     public class TransaccionesController : Controller
     {
         private readonly IServicioUsuarios servicioUsuarios;
