@@ -35,5 +35,14 @@ namespace ManejoPresupuesto.Repositories.Implementation
                 "SELECT * FROM Usuarios where EmailNormalizado = @emailNormalizado",
                 new { emailNormalizado });
         }
+
+        public async Task Actualizar(Usuario usuario)
+        {
+            using var connection = new SqlConnection(connectionString);
+            await connection.ExecuteAsync(@"
+            UPDATE Usuarios 
+            SET PasswordHash = @PasswordHash
+            WHERE Id = @Id", usuario);
+        }
     }
 }
